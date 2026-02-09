@@ -1,4 +1,5 @@
 import Alpine from 'alpinejs'
+import focus from '@alpinejs/focus'
 
 /* =========================================================
    UI MODAL — DEVE EXISTIR ANTES DO Alpine.start()
@@ -50,8 +51,62 @@ globalThis.ui = {
     },
 }
 
+globalThis.uiToast = function () {
+    return {
+        toasts: [],
+
+        init() { },
+
+        add(message, type = 'info', timeout = 3000) {
+            const id = Date.now() + Math.random()
+
+            this.toasts.push({
+                id,
+                message,
+                type,
+                visible: true,
+            })
+
+            setTimeout(() => this.remove(id), timeout)
+        },
+
+        remove(id) {
+            const toast = this.toasts.find(t => t.id === id)
+            if (!toast) return
+
+            toast.visible = false
+
+            setTimeout(() => {
+                this.toasts = this.toasts.filter(t => t.id !== id)
+            }, 200)
+        }
+        ,
+
+        toastClass(type) {
+            return {
+                'bg-ui-toast-success': type === 'success',
+                'bg-ui-toast-error': type === 'error',
+                'bg-ui-toast-warning': type === 'warning',
+                'bg-ui-toast-info': type === 'info',
+            }
+        },
+    }
+}
+
+globalThis.ui.toast = {
+    success(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'success' } })) },
+    error(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'error' } })) },
+    warning(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'warning' } })) },
+    info(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'info' } })) },
+}
+
+
 /* =========================================================
    ALPINE — POR ÚLTIMO
 ========================================================= */
 globalThis.Alpine = Alpine
-Alpine.start()
+Alpine.plugin(focus)
+
+document.addEventListener('DOMContentLoaded', () => {
+    Alpine.start()
+})

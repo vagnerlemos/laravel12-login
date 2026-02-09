@@ -1,0 +1,9 @@
+/* resources/css/tokens/_tables.css */
+
+:root {
+    --ui-table-border: #e5e7eb;
+    --ui-table-head-bg: #f9fafb;
+    --ui-table-head-text: #374151;
+    --ui-table-row-hover: #f3f4f6;
+    --ui-table-text: #111827;
+}

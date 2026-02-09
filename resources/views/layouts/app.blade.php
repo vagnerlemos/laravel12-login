@@ -4,30 +4,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>{{ $title ?? 'Sistema' }}</title>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <title>{{ $app->label ?? 'Sistema' }}</title>
 </head>
+<body
+    x-data
+    class="min-h-screen bg-ui-app-bg text-ui-app-text"
+>
 
-<body>
-     @include('partials.loader')
-     @include('partials.alerts')
+    {{-- Loader global --}}
+    @include('partials.loader')
 
-    <header>
-        <strong>{{ $app->label ?? 'App' }}</strong>
-        <form method="POST" action="{{ route($app->code . '.logout') }}">
-            @csrf
-            <button type="submit">Sair</button>
-        </form>
-    </header>
+    {{-- Mobile menu (drawer) --}}
+    @include('layouts.partials.mobile-menu')
 
-    <main>
-        @yield('content')
-    </main>
+    <div class="flex min-h-screen">
 
+        {{-- Sidebar (desktop) --}}
+        <aside class="hidden lg:block w-64 shrink-0">
+            @include('layouts.partials.sidebar')
+        </aside>
 
+        {{-- Área principal --}}
+        <div class="flex-1 flex flex-col">
 
+            {{-- Topbar --}}
+            @include('layouts.partials.topbar')
 
+            {{-- Breadcrumb --}}
+            @include('layouts.partials.breadcrumb')
+
+            {{-- Alerts globais (somente sistema interno) --}}
+            @include('partials.alerts')
+
+            {{-- Conteúdo --}}
+            <main class="flex-1 p-4">
+                {{ $slot ?? $content ?? '' }}
+                @yield('content')
+            </main>
+
+        </div>
+    </div>
+    <x-ui.toast.container />
 
 
 </body>

@@ -1,0 +1,16 @@
+/* resources/css/tokens/_navigation.css */
+
+:root {
+    /* Sidebar background e bordas */
+    --ui-nav-bg: #ffffff;
+    --ui-nav-border: #e5e7eb;
+
+    /* Textos */
+    --ui-nav-title: #111827;
+    --ui-nav-text: #374151;
+
+    /* Estados */
+    --ui-nav-hover: #f3f4f6;
+    --ui-nav-active: #111827;
+    --ui-nav-active-text: #ffffff;
+}

@@ -1,0 +1,7 @@
+/* resources/css/tokens/_app.css */
+
+:root {
+    /* Background e texto padrão do sistema */
+    --ui-app-bg: #f9fafb;
+    --ui-app-text: #111827;
+}

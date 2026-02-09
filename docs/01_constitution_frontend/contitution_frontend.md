@@ -358,16 +358,11 @@ Nenhuma ferramenta nasce informal.
 14. ROADMAP BASE
 
 Fase 1 — Fundação
-
-Tokens
-
-Alerts
-
-Buttons
-
-Forms
-
-Loader
+    Tokens
+    Alerts
+    Buttons
+    Forms
+    Loader
 
 Fase 2 — Operação
 

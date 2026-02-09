@@ -1,0 +1,9 @@
+:root {
+    --ui-toast-bg: #111827;
+    --ui-toast-text: #ffffff;
+
+    --ui-toast-success: #16a34a;
+    --ui-toast-error: #dc2626;
+    --ui-toast-warning: #d97706;
+    --ui-toast-info: #2563eb;
+}
