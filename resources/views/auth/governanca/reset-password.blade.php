@@ -12,6 +12,7 @@
             <x-ui.form
                 method="POST"
                 action="{{ route('governanca.password.update') }}"
+                x-on:submit="ui.loader.show()"
             >
                 <input type="hidden" name="token" value="{{ $token }}">
 

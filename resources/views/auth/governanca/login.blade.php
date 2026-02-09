@@ -10,10 +10,17 @@
             />
 
             <x-ui.form
-                method="POST"
-                action="{{ route('governanca.login.submit') }}"
-                x-on:submit="ui.loader.show()"
-            >
+    method="POST"
+    action="{{ route('governanca.login.submit') }}"
+    x-data="{ submitting: false }"
+    x-on:submit.prevent="
+        if (submitting) return;
+        submitting = true;
+        ui.loader.show();
+        $el.submit();
+    "
+>
+
                 <x-ui.form.input
                     name="email"
                     type="email"

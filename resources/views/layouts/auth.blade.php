@@ -11,8 +11,7 @@
 </head>
 <body class="min-h-screen bg-ui-auth-bg text-ui-auth-text">
 
-    {{-- Alerts globais --}}
-    @include('partials.alerts')
+
 
     {{-- Loader global --}}
     @include('partials.loader')

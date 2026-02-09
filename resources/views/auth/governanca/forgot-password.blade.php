@@ -12,6 +12,7 @@
             <x-ui.form
                 method="POST"
                 action="{{ route('governanca.password.email') }}"
+                x-on:submit="ui.loader.show()"
             >
                 <x-ui.form.input
                     name="email"
