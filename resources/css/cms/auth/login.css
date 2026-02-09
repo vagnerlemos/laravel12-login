@@ -1,0 +1,19 @@
+.auth-cms {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.auth-card {
+    width: 360px;
+    margin: 10vh auto;
+    padding: 2rem;
+    background: #020617;
+    border-radius: 8px;
+}
+
+.auth-error {
+    background: #7f1d1d;
+    padding: .75rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}

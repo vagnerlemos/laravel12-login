@@ -1,0 +1,12 @@
+:root {
+    /* Auth backgrounds */
+    --ui-auth-bg: #0f172a;
+    /* slate-900 */
+    --ui-auth-text: #e5e7eb;
+    /* gray-200 */
+
+    /* Auth typography */
+    --ui-auth-title: #ffffff;
+    --ui-auth-subtitle: #9ca3af;
+    /* gray-400 */
+}
