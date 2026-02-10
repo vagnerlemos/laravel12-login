@@ -1,5 +1,9 @@
 /* resources/css/tokens/index.css */
 
+/* =========================================================
+   BASE TOKENS (obrigatório)
+   - mantém o "design system" vivo (toast/modal/etc)
+========================================================= */
 @import "./_auth.css";
 @import "./_shadows.css";
 @import "./_navigation.css";
@@ -7,3 +11,18 @@
 @import "./_tables.css";
 @import "./_toast.css";
 @import "./_modal.css";
+
+/* =========================================================
+   ZONAS (perfil visual por zona)
+========================================================= */
+@import "./zones/app.light.css";
+@import "./zones/app.dark.css";
+
+@import "./zones/navigation.light.css";
+@import "./zones/navigation.dark.css";
+
+@import "./zones/content.light.css";
+@import "./zones/content.dark.css";
+
+@import "./zones/auth.light.css";
+@import "./zones/auth.dark.css";

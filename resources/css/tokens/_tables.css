@@ -1,9 +1,19 @@
-/* resources/css/tokens/_tables.css */
+.ui-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-:root {
-    --ui-table-border: #e5e7eb;
-    --ui-table-head-bg: #f9fafb;
-    --ui-table-head-text: #374151;
-    --ui-table-row-hover: #f3f4f6;
-    --ui-table-text: #111827;
+.ui-table th,
+.ui-table td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.ui-table thead th {
+    font-weight: 600;
+}
+
+.ui-table tbody tr:hover {
+    background: var(--ui-table-hover-bg);
 }

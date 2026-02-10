@@ -1,0 +1,8 @@
+/* resources/css/tokens/zones/navigation.dark.css */
+[data-zone="navigation"][data-theme="dark"] {
+    --ui-nav-bg: #0f172a;
+    --ui-nav-text: #cbd5e1;
+    --ui-nav-title: #ffffff;
+    --ui-nav-border: #1e293b;
+    --ui-nav-hover: #111c2e;
+}

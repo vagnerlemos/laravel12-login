@@ -217,3 +217,22 @@ UX de alto nível
 
 Se Alpine parecer “morto”, mas o JS existir,
 verifique primeiro a presença de x-data no layout raiz.
+
+
+
+
+entao Vou passar agora o arquivo fonte do meu sistema e quero que você deixe ele já registrado para que você saiba como a gente está trabalhando. Então, você vai ter esse arquivo como pesquisa a partir de agora. Você vai usá-lo. Vai construir qualquer coisa. Antes de construir, você consulta o que precisar de consultar. Consulta o controller, consulta o provider, consulta o middleware, consulta o que tiver que consultar, porque ele está com você. E esse arquivo fonte que eu vou te passar, ele vai ser o arquivo do começo ao fim desse chat pra você consultar sempre. Não precisa me perguntar como as coisas estão, porque eu estou te passando como elas estão. Então, coloque isso como prioridade, como se esse arquivo que eu fosse te passar, esse arquivo fonte, fosse um prompt digitado aqui. Trate ele como um prompt, carregue tudo pra você. Então, ele tem que ser considerado do começo ao fim desse chat, sempre pesquisando e obviamente, conforme a gente for alterando esse arquivo, você já vai colocando em memória isso. Aquele controller que era de um jeito, agora é de outro. Você vai saber disso. Aquele middleware que era de um jeito, agora é de outro. E assim por diante. As coisas vão se transformando, caso necessário. entao sabendo distos vamos para a fase 3
+
+
+PRÓXIMO PASSO (FASE 3 · FINAL)
+6️⃣ Refinamentos Avançados
+
+Validações visuais
+
+Estados disabled/loading
+
+Acessibilidade
+
+Micro-interações
+
+Polimento final

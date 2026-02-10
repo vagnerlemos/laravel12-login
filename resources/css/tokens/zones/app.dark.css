@@ -1,0 +1,5 @@
+/* resources/css/tokens/zones/app.dark.css */
+[data-zone="app"][data-theme="dark"] {
+    --ui-app-bg: #0b1220;
+    --ui-app-text: #e2e8f0;
+}

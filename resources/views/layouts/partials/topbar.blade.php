@@ -1,4 +1,27 @@
-<header class="h-14 bg-ui-nav-bg border-b border-ui-nav-border flex items-center px-4">
+{{-- resources/views/layouts/partials/topbar.blade.php --}}
+@php
+    $appCode = session('current_app_code', 'governanca');
+
+    // tenta resolver a rota do visual-profile por app (ex.: governanca.ui.visual-profile)
+    $visualProfileEndpoint = null;
+
+    try {
+        $visualProfileEndpoint = route($appCode . '.ui.visual-profile');
+    } catch (\Throwable $e) {
+        // fallback canônico (caso só Governança exista por enquanto)
+        try {
+            $visualProfileEndpoint = route('governanca.ui.visual-profile');
+        } catch (\Throwable $e2) {
+            $visualProfileEndpoint = null;
+        }
+    }
+@endphp
+
+<header
+    data-zone="navigation"
+    data-theme="{{ $navigationTheme }}"
+    class="h-14 bg-ui-nav-bg border-b border-ui-nav-border flex items-center px-4"
+>
     <div class="flex items-center justify-between w-full">
 
         {{-- Esquerda: botão mobile + título --}}
@@ -7,7 +30,8 @@
             <button
                 type="button"
                 class="lg:hidden rounded-lg p-2 hover:bg-ui-nav-hover"
-                x-on:click="ui.modal.open('mobile-menu')"
+                x-on:click="window.dispatchEvent(new CustomEvent('ui-mobile-open'))"
+
                 aria-label="Abrir menu"
             >
                 ☰
@@ -19,8 +43,15 @@
             </h1>
         </div>
 
-        {{-- Direita: área do usuário (placeholder) --}}
+        {{-- Direita: ações --}}
         <div class="flex items-center gap-3">
+
+            {{-- Seletor de perfil visual --}}
+            <x-ui.theme.switch
+                :visual-profile="$visualProfile"
+                :endpoint="$visualProfileEndpoint"
+            />
+
             <span class="text-sm text-ui-nav-text">
                 {{ auth()->user()->name ?? 'Usuário' }}
             </span>

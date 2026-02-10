@@ -1,0 +1,7 @@
+/* resources/css/tokens/zones/auth.dark.css */
+[data-zone="auth"][data-theme="dark"] {
+    --ui-auth-bg: #070d18;
+    --ui-auth-text: #e2e8f0;
+    --ui-auth-title: #ffffff;
+    --ui-auth-subtitle: #94a3b8;
+}

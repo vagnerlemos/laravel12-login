@@ -1,5 +1,9 @@
+// resources/js/app.js
 import Alpine from 'alpinejs'
 import focus from '@alpinejs/focus'
+
+import themeSwitch from './components/theme-switch'
+import toastComponent from './components/toast'
 
 /* =========================================================
    UI MODAL — DEVE EXISTIR ANTES DO Alpine.start()
@@ -9,11 +13,11 @@ globalThis.uiModal = function (id) {
         open: false,
 
         init() {
-            globalThis.addEventListener('ui-modal-open', e => {
+            window.addEventListener('ui-modal-open', (e) => {
                 if (e.detail === id) this.open = true
             })
 
-            globalThis.addEventListener('ui-modal-close', e => {
+            window.addEventListener('ui-modal-close', (e) => {
                 if (!e.detail || e.detail === id) this.open = false
             })
         },
@@ -25,88 +29,57 @@ globalThis.uiModal = function (id) {
 }
 
 /* =========================================================
-   UI GLOBAL
+   UI GLOBAL API (CHAMADA PELO BLADE)
+   - PADRÃO: detail = { message, type }
 ========================================================= */
-globalThis.ui = {
-    loader: {
-        show() {
-            globalThis.dispatchEvent(new CustomEvent('ui-loader-show'))
-        },
-        hide() {
-            globalThis.dispatchEvent(new CustomEvent('ui-loader-hide'))
-        },
-    },
-
-    modal: {
-        open(id) {
-            globalThis.dispatchEvent(
-                new CustomEvent('ui-modal-open', { detail: id })
-            )
-        },
-        close(id) {
-            globalThis.dispatchEvent(
-                new CustomEvent('ui-modal-close', { detail: id })
-            )
-        },
-    },
-}
-
-globalThis.uiToast = function () {
-    return {
-        toasts: [],
-
-        init() { },
-
-        add(message, type = 'info', timeout = 3000) {
-            const id = Date.now() + Math.random()
-
-            this.toasts.push({
-                id,
-                message,
-                type,
-                visible: true,
-            })
-
-            setTimeout(() => this.remove(id), timeout)
-        },
-
-        remove(id) {
-            const toast = this.toasts.find(t => t.id === id)
-            if (!toast) return
-
-            toast.visible = false
-
-            setTimeout(() => {
-                this.toasts = this.toasts.filter(t => t.id !== id)
-            }, 200)
-        }
-        ,
-
-        toastClass(type) {
-            return {
-                'bg-ui-toast-success': type === 'success',
-                'bg-ui-toast-error': type === 'error',
-                'bg-ui-toast-warning': type === 'warning',
-                'bg-ui-toast-info': type === 'info',
-            }
-        },
-    }
-}
+globalThis.ui = globalThis.ui || {}
 
 globalThis.ui.toast = {
-    success(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'success' } })) },
-    error(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'error' } })) },
-    warning(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'warning' } })) },
-    info(msg) { globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { msg, type: 'info' } })) },
+    success(message) {
+        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'success' } }))
+    },
+    error(message) {
+        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'error' } }))
+    },
+    warning(message) {
+        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'warning' } }))
+    },
+    info(message) {
+        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'info' } }))
+    },
 }
 
+globalThis.ui.modal = {
+    open(id) {
+        window.dispatchEvent(new CustomEvent('ui-modal-open', { detail: id }))
+    },
+    close(id) {
+        window.dispatchEvent(new CustomEvent('ui-modal-close', { detail: id }))
+    },
+    closeAll() {
+        window.dispatchEvent(new CustomEvent('ui-modal-close'))
+    },
+}
+
+globalThis.ui.loader = {
+    show() {
+        window.dispatchEvent(new CustomEvent('ui-loader-show'))
+    },
+    hide() {
+        window.dispatchEvent(new CustomEvent('ui-loader-hide'))
+    },
+}
 
 /* =========================================================
-   ALPINE — POR ÚLTIMO
+   ALPINE
 ========================================================= */
-globalThis.Alpine = Alpine
 Alpine.plugin(focus)
 
-document.addEventListener('DOMContentLoaded', () => {
-    Alpine.start()
-})
+/**
+ * REGISTRO CANÔNICO DOS COMPONENTES
+ */
+Alpine.data('uiToast', toastComponent)
+Alpine.data('themeSwitch', themeSwitch)
+
+window.Alpine = Alpine
+Alpine.start()

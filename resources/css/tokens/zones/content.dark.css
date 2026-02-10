@@ -1,0 +1,5 @@
+/* resources/css/tokens/zones/content.dark.css */
+[data-zone="content"][data-theme="dark"] {
+    --ui-content-bg: transparent;
+    --ui-content-text: #e2e8f0;
+}

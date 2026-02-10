@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UI\VisualProfileController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -59,4 +62,7 @@ Route::prefix('governanca')
 
         Route::post('/logout', [LoginController::class, 'logout'])
             ->name('governanca.logout');
+        // ✅ ROTA DO VISUAL PROFILE DARK/LIGHT
+        Route::post('/ui/visual-profile', [VisualProfileController::class, 'update'])
+            ->name('governanca.ui.visual-profile');
     });

@@ -1,16 +1,17 @@
-@props([
-    'title' => 'Nenhum registro encontrado',
-    'description' => 'Não há dados para exibir no momento.',
-])
+<div class="ui-table w-full overflow-x-auto">
+    <table class="min-w-full border-collapse text-sm">
+        <thead class="bg-ui-table-head">
+            {{ $head ?? '' }}
+        </thead>
 
-<div class="flex flex-col items-center justify-center py-12 text-center">
-    <div class="text-sm font-medium text-ui-table-text">
-        {{ $title }}
-    </div>
+        <tbody class="divide-y divide-ui-table-border">
+            {{ $slot }}
+        </tbody>
+    </table>
 
-    <p class="mt-1 text-sm text-ui-nav-text">
-        {{ $description }}
-    </p>
-
-    {{ $slot }}
+    @if (isset($pagination))
+        <div class="mt-3">
+            {{ $pagination }}
+        </div>
+    @endif
 </div>

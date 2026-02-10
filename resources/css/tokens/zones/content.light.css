@@ -1,0 +1,5 @@
+/* resources/css/tokens/zones/content.light.css */
+[data-zone="content"][data-theme="light"] {
+    --ui-content-bg: transparent;
+    --ui-content-text: #0f172a;
+}

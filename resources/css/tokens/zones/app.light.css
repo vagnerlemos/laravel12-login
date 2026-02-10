@@ -1,0 +1,5 @@
+/* resources/css/tokens/zones/app.light.css */
+[data-zone="app"][data-theme="light"] {
+    --ui-app-bg: #f8fafc;
+    --ui-app-text: #0f172a;
+}

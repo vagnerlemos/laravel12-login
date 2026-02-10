@@ -1,0 +1,8 @@
+/* resources/css/tokens/zones/navigation.light.css */
+[data-zone="navigation"][data-theme="light"] {
+    --ui-nav-bg: #ffffff;
+    --ui-nav-text: #334155;
+    --ui-nav-title: #0f172a;
+    --ui-nav-border: #e2e8f0;
+    --ui-nav-hover: #f1f5f9;
+}

@@ -1,14 +1,24 @@
 @import 'tailwindcss';
+@import './base/app.css';
 
-/* ✅ IMPORTAR TOKENS (obrigatório) */
+
+/* ================================
+   TOKENS (OBRIGATÓRIO)
+================================ */
 @import './tokens/index.css';
 
-
+/* ================================
+   SOURCES (TAILWIND SCAN)
+================================ */
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* ================================
+   THEME MAPPING
+   (Tailwind v4: utilities via CSS variables)
+================================ */
 @theme {
     /* Font */
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
@@ -16,13 +26,18 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 
     /* Toast */
+    --color-ui-toast-bg: var(--ui-toast-bg);
     --color-ui-toast-success: var(--ui-toast-success);
     --color-ui-toast-error: var(--ui-toast-error);
     --color-ui-toast-warning: var(--ui-toast-warning);
     --color-ui-toast-info: var(--ui-toast-info);
     --color-ui-toast-text: var(--ui-toast-text);
 
-    /* Modal / Card */
+    /* Modal */
+    --color-ui-modal-title: var(--ui-modal-title);
+    --color-ui-modal-text: var(--ui-modal-text);
+
+    /* Card shadow */
     --shadow-ui-card: var(--shadow-ui-card);
 
     /* App (base) */
@@ -32,4 +47,9 @@
     /* Navigation */
     --color-ui-nav-bg: var(--ui-nav-bg);
     --color-ui-nav-border: var(--ui-nav-border);
+
+    /* (Opcional: se você já usa essas utilities em algum lugar)
+       --color-ui-nav-title: var(--ui-nav-title);
+       --color-ui-nav-text: var(--ui-nav-text);
+    */
 }

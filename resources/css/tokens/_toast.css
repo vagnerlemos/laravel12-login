@@ -7,3 +7,29 @@
     --ui-toast-warning: #d97706;
     --ui-toast-info: #2563eb;
 }
+
+/* =========================================================
+   TOAST (CSS institucional)
+   - Não depende de utilities bg-* geradas
+   - Apenas consome tokens
+========================================================= */
+.ui-toast {
+    background: var(--ui-toast-bg);
+    color: var(--ui-toast-text);
+}
+
+.ui-toast[data-toast-type='success'] {
+    background: var(--ui-toast-success);
+}
+
+.ui-toast[data-toast-type='error'] {
+    background: var(--ui-toast-error);
+}
+
+.ui-toast[data-toast-type='warning'] {
+    background: var(--ui-toast-warning);
+}
+
+.ui-toast[data-toast-type='info'] {
+    background: var(--ui-toast-info);
+}

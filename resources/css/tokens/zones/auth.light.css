@@ -1,0 +1,8 @@
+/* resources/css/tokens/zones/auth.light.css */
+[data-zone="auth"][data-theme="light"] {
+    --ui-auth-bg: #0b1220;
+    /* seu login pode ser dark por padrão */
+    --ui-auth-text: #e2e8f0;
+    --ui-auth-title: #ffffff;
+    --ui-auth-subtitle: #94a3b8;
+}

@@ -53,16 +53,58 @@ const CONFIG = {
 
     // 🚫 Exclusões globais
     IGNORAR: [
+
+        // 🚫 Globais (já definidos)
         "vendor",
         "node_modules",
         ".git",
         ".idea",
         "dist",
+        "resources/views/welcome.blade.php",
+        "database/database.sqlite",
+
+        // 🚫 Cache / runtime Laravel
+        "bootstrap/cache",
+        "storage/framework",
+        "storage/logs",
+        "storage/debugbar",
+
+        // 🚫 Temporários / dumps
+        "storage/app/tmp",
+        "storage/app/temp",
+        "storage/app/private",
+
+        // 🚫 Front-end build/cache
+        "public/build",
+        "public/hot",
+        "public/mix-manifest.json",
+
+        // 🚫 Arquivos de ambiente
+        ".env",
+        ".env.example",
+
+        // 🚫 Logs e relatórios locais
+        "npm-debug.log",
+        "yarn-error.log",
+        "pnpm-debug.log",
+
+        // 🚫 Testes automáticos (não fazem parte do runtime)
+        "tests",
+
+        // 🚫 Arquivos de backup/editor
+        ".vscode",
+        "*.log",
+        "*.bak",
+        "*.tmp",
+
+        // 🚫 Arquivos gerados pelo sistema
+        "routes/console.php",
     ],
 
 
+
     // MEGA_FILE: "Y-database-laravel-12.md",
-    MEGA_FILE: "Y-04-laravel-12-codigo-fonte.md",
+    MEGA_FILE: "Y-11-laravel-12-codigo-fonte.md",
 
 };
 
