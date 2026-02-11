@@ -61,6 +61,11 @@ Route::prefix('governanca')
         Route::get('/', [DashboardController::class, 'index'])
             ->name('governanca.dashboard');
 
+
+        Route::post('/test-submit', function () {
+            return redirect()->back()->with('success', 'Processado com sucesso');
+        })->name('governanca.test-submit');
+
         Route::post('/logout', [LoginController::class, 'logout'])
             ->name('governanca.logout');
         /*

@@ -5,6 +5,10 @@ import focus from '@alpinejs/focus'
 import themeSwitch from './components/theme-switch'
 import toastComponent from './components/toast'
 import { uiUpload } from './components/upload'
+import './core/ui-form';
+import './core/form-submit';
+
+
 
 /* =========================================================
    UI MODAL — DEVE EXISTIR ANTES DO Alpine.start()

@@ -1,9 +1,21 @@
 <div
     x-data="uiModal('{{ $id }}')"
+    x-init="
+        init();
+        $watch('open', value => {
+            if (value) {
+                $nextTick(() => {
+                    const el = $el.querySelector('button, [href], input, select, textarea');
+                    el && el.focus();
+                });
+            }
+        });
+    "
     x-show="open"
     x-cloak
-    class="fixed inset-0 z-50"
+    class="fixed inset-0 z-[9998]"
 >
+
     {{-- OVERLAY (ÚNICO ELEMENTO CLICÁVEL FORA DO MODAL) --}}
     <div
         class="absolute inset-0 bg-black/40"

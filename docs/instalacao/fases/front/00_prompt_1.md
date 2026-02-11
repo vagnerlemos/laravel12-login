@@ -76,11 +76,20 @@ Sempre informar:
 
 Caminho completo desde a raiz do projeto
 
-Em bloco separado
+Em bloco de código (obrigatório)
 
-Copiável no terminal / VS Code
+Isolado do restante da resposta
 
-Exemplo:
+Copiável via botão automático do ChatGPT
+
+Sem texto antes ou depois dentro do mesmo bloco
+
+Formato obrigatório:
+
+caminho/completo/do/arquivo.ext
+
+
+Exemplo correto:
 
 resources/views/auth/login.blade.php
 

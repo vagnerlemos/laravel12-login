@@ -1,6 +1,9 @@
 <x-ui.button.base
     {{ $attributes }}
-    class="bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400"
+    class="bg-[var(--ui-btn-secondary-bg)]
+           text-[var(--ui-btn-secondary-text)]
+           hover:bg-[var(--ui-btn-secondary-bg-hover)]
+           focus:ring-[var(--ui-btn-secondary-ring)]"
 >
     {{ $slot }}
 </x-ui.button.base>

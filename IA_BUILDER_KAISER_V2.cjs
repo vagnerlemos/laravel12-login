@@ -95,7 +95,7 @@ const CONFIG = {
     ],
 
     // 📦 Saída
-    MEGA_FILE: "Y4-IA-V2-laravel-12-codigo-fonte.md",
+    MEGA_FILE: "Y6-IA-V2-laravel-12-codigo-fonte.md",
 };
 //              node IA_BUILDER_KAISER_V2.cjs
 

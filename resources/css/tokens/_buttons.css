@@ -1,0 +1,51 @@
+/* resources/css/tokens/_buttons.css */
+
+:root {
+    /* =========================================================
+       BUTTON SYSTEM — TOKENS INSTITUCIONAIS
+    ========================================================= */
+
+    /* Base */
+    --ui-btn-radius: 0.5rem;
+    --ui-btn-px: 1rem;
+    --ui-btn-py: 0.5rem;
+    --ui-btn-font-size: 0.875rem;
+    --ui-btn-font-weight: 500;
+
+    --ui-btn-disabled-opacity: 0.6;
+
+    --ui-btn-ring-width: 2px;
+    --ui-btn-ring-offset: 2px;
+
+    --ui-btn-spinner-size: 1rem;
+    --ui-btn-spinner-border-width: 2px;
+    --ui-btn-spinner-color: currentColor;
+
+    /* =========================================================
+       VARIANTES AJUSTADAS (CONTRASTE REAL)
+    ========================================================= */
+
+    /* PRIMARY */
+    --ui-btn-primary-bg: #2563eb;
+    --ui-btn-primary-bg-hover: #1d4ed8;
+    --ui-btn-primary-text: #ffffff;
+    --ui-btn-primary-ring: #3b82f6;
+
+    /* SECONDARY (corrigido — mais contraste) */
+    --ui-btn-secondary-bg: #e5e7eb;
+    --ui-btn-secondary-bg-hover: #d1d5db;
+    --ui-btn-secondary-text: #111827;
+    --ui-btn-secondary-ring: #9ca3af;
+
+    /* DANGER */
+    --ui-btn-danger-bg: #dc2626;
+    --ui-btn-danger-bg-hover: #b91c1c;
+    --ui-btn-danger-text: #ffffff;
+    --ui-btn-danger-ring: #ef4444;
+
+    /* GHOST (realmente transparente agora) */
+    --ui-btn-ghost-bg: transparent;
+    --ui-btn-ghost-bg-hover: rgba(17, 24, 39, 0.08);
+    --ui-btn-ghost-text: #111827;
+    --ui-btn-ghost-ring: #9ca3af;
+}

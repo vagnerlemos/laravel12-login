@@ -1,7 +1,10 @@
 <div
-    x-data="uiToast"
-    class="fixed top-4 right-4 z-[9999] space-y-2"
+    x-data="uiToast()"
+    role="status"
+    aria-live="polite"
+    class="fixed top-4 right-4 z-50 space-y-2"
 >
+
     <template x-for="toast in toasts" :key="toast.id">
         <div
             x-show="toast.visible"

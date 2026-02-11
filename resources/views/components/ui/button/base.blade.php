@@ -1,31 +1,27 @@
 @props([
     'type' => 'button',
-    'loading' => false,
-    'disabled' => false,
 ])
 
 <button
     type="{{ $type }}"
-
-    {{ $disabled || $loading ? 'disabled' : '' }}
-
     {{ $attributes->merge([
         'class' =>
-        'inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition
-         focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60'
+        'inline-flex items-center justify-center gap-2
+         cursor-pointer
+         rounded-[var(--ui-btn-radius)]
+         px-[var(--ui-btn-px)] py-[var(--ui-btn-py)]
+         text-[var(--ui-btn-font-size)] font-[var(--ui-btn-font-weight)]
+         transition
+         focus:outline-none
+         focus:ring-[var(--ui-btn-ring-width)]
+         focus:ring-offset-[var(--ui-btn-ring-offset)]
+         disabled:cursor-not-allowed
+         disabled:opacity-[var(--ui-btn-disabled-opacity)]'
     ]) }}
 >
+    <span class="ui-btn-spinner hidden"></span>
 
-    {{-- Spinner --}}
-    @if($loading)
-        <span
-            class="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"
-        ></span>
-    @endif
-
-    {{-- Label --}}
-    <span>
+    <span class="ui-btn-label">
         {{ $slot }}
     </span>
-
 </button>
