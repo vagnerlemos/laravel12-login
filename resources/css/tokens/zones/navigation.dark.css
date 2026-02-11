@@ -1,8 +1,21 @@
 /* resources/css/tokens/zones/navigation.dark.css */
 [data-zone="navigation"][data-theme="dark"] {
+    /* Design tokens (constitucionais) */
     --ui-nav-bg: #0f172a;
     --ui-nav-text: #cbd5e1;
     --ui-nav-title: #ffffff;
     --ui-nav-border: #1e293b;
     --ui-nav-hover: #111c2e;
+
+    --ui-nav-active: #111c2e;
+    --ui-nav-active-text: #ffffff;
+
+    /* Tailwind v4 bridge */
+    --color-ui-nav-bg: var(--ui-nav-bg);
+    --color-ui-nav-text: var(--ui-nav-text);
+    --color-ui-nav-title: var(--ui-nav-title);
+    --color-ui-nav-border: var(--ui-nav-border);
+    --color-ui-nav-hover: var(--ui-nav-hover);
+    --color-ui-nav-active: var(--ui-nav-active);
+    --color-ui-nav-active-text: var(--ui-nav-active-text);
 }

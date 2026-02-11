@@ -1,3 +1,15 @@
+/* resources/css/tokens/_tables.css */
+
+/* =========================================================
+   TOKENS (Tables)
+   - Mantém defaults e permite override por zona (content.*)
+========================================================= */
+:root {
+    --ui-table-head: #f8fafc;
+    --ui-table-border: #e2e8f0;
+    --ui-table-hover-bg: #f1f5f9;
+}
+
 .ui-table table {
     width: 100%;
     border-collapse: collapse;

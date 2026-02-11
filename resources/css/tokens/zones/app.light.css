@@ -1,5 +1,12 @@
 /* resources/css/tokens/zones/app.light.css */
 [data-zone="app"][data-theme="light"] {
+    /* Design tokens (constitucionais) */
     --ui-app-bg: #f8fafc;
     --ui-app-text: #0f172a;
+
+    /* Tailwind v4 bridge (utilities via CSS variables)
+       Ex.: bg-ui-app-bg / text-ui-app-text
+    */
+    --color-ui-app-bg: var(--ui-app-bg);
+    --color-ui-app-text: var(--ui-app-text);
 }

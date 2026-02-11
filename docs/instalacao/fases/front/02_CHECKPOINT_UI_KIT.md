@@ -221,18 +221,55 @@ verifique primeiro a presença de x-data no layout raiz.
 
 
 
-entao Vou passar agora o arquivo fonte do meu sistema e quero que você deixe ele já registrado para que você saiba como a gente está trabalhando. Então, você vai ter esse arquivo como pesquisa a partir de agora. Você vai usá-lo. Vai construir qualquer coisa. Antes de construir, você consulta o que precisar de consultar. Consulta o controller, consulta o provider, consulta o middleware, consulta o que tiver que consultar, porque ele está com você. E esse arquivo fonte que eu vou te passar, ele vai ser o arquivo do começo ao fim desse chat pra você consultar sempre. Não precisa me perguntar como as coisas estão, porque eu estou te passando como elas estão. Então, coloque isso como prioridade, como se esse arquivo que eu fosse te passar, esse arquivo fonte, fosse um prompt digitado aqui. Trate ele como um prompt, carregue tudo pra você. Então, ele tem que ser considerado do começo ao fim desse chat, sempre pesquisando e obviamente, conforme a gente for alterando esse arquivo, você já vai colocando em memória isso. Aquele controller que era de um jeito, agora é de outro. Você vai saber disso. Aquele middleware que era de um jeito, agora é de outro. E assim por diante. As coisas vão se transformando, caso necessário. entao sabendo distos vamos para a fase 3
+entao Vou passar agora o arquivo fonte do meu sistema e quero que você deixe ele já registrado para que você saiba como a gente está trabalhando. Então, você vai ter esse arquivo como pesquisa a partir de agora. Você vai usá-lo. Vai construir qualquer coisa. Antes de construir, você consulta o que precisar de consultar. Consulta o controller, consulta o provider, consulta o middleware, consulta o que tiver que consultar, porque ele está com você. E esse arquivo fonte que eu vou te passar, ele vai ser o arquivo do começo ao fim desse chat pra você consultar sempre. Não precisa me perguntar como as coisas estão, porque eu estou te passando como elas estão. Então, coloque isso como prioridade, como se esse arquivo que eu fosse te passar, esse arquivo fonte, fosse um prompt digitado aqui. Trate ele como um prompt, carregue tudo pra você. Então, ele tem que ser considerado do começo ao fim desse chat, sempre pesquisando e obviamente, conforme a gente for alterando esse arquivo, você já vai colocando em memória isso. Aquele controller que era de um jeito, agora é de outro. Você vai saber disso. Aquele middleware que era de um jeito, agora é de outro. E assim por diante. As coisas vão se transformando, caso necessário. 
 
 
-PRÓXIMO PASSO (FASE 3 · FINAL)
-6️⃣ Refinamentos Avançados
+O modo de trabalho será da seguinte forma. Você me fornece o caminho do arquivo, completo, desde a raiz até o arquivo, separado em um bloco, com o botão copiar e colar, para eu copiar o nome do arquivo, aí eu trago esse nome do arquivo, colo ali no VS Code do terminal, ele abre para mim o arquivo. E o arquivo que você for alterar ou criar sempre será completo, porque como você já tem o código-fonte, você sabe qual é o arquivo. Então, se tiver que alterar, pegue o arquivo no código-fonte, altere completo para eu copiar e colar. Então, vai ser sempre assim. O caminho do arquivo num bloco separado para eu poder copiar e colar, clicar no botão de copiar e colar, logo abaixo, o arquivo completo, criado ou alterado.
 
-Validações visuais
+Entendido perfeitamente.
 
-Estados disabled/loading
+Modo de trabalho confirmado (regra ativa)
 
-Acessibilidade
+Sempre que eu criar ou alterar qualquer arquivo, farei exatamente assim:
 
-Micro-interações
+1️⃣ Primeiro bloco
 
-Polimento final
+Caminho completo do arquivo, desde a raiz do projeto
+
+Em um bloco separado, próprio para copiar e colar no terminal / VS Code
+
+2️⃣ Segundo bloco
+
+Conteúdo COMPLETO do arquivo
+
+Já criado ou alterado integralmente
+
+Pronto para copiar e colar, sem trechos, sem “diff”, sem omissões
+
+Regras adicionais já absorvidas
+
+Nunca enviarei apenas partes do arquivo
+
+Nunca pedirei para você “completar” nada
+
+Sempre consultarei o código-fonte carregado antes de mexer
+
+O arquivo enviado substitui totalmente o anterior
+
+Mesmo padrão para:
+
+arquivos novos
+
+arquivos alterados
+
+tokens
+
+JS
+
+Blade
+
+services
+
+controllers
+
+providers

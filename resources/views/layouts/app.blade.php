@@ -78,7 +78,7 @@
             <main
                 data-zone="content"
                 data-theme="{{ $contentTheme }}"
-                class="flex-1 p-4"
+                class="flex-1 p-4 bg-ui-content-bg text-ui-content-text"
             >
                 {{ $slot ?? $content ?? '' }}
                 @yield('content')

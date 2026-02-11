@@ -1,5 +1,18 @@
 /* resources/css/tokens/zones/content.dark.css */
 [data-zone="content"][data-theme="dark"] {
+    /* Design tokens (constitucionais) */
     --ui-content-bg: transparent;
     --ui-content-text: #e2e8f0;
+
+    /* Table tokens (usados pelo UI Kit) */
+    --ui-table-head: #0b1220;
+    --ui-table-border: #1e293b;
+    --ui-table-hover-bg: #111c2e;
+
+    /* Tailwind v4 bridge */
+    --color-ui-content-bg: var(--ui-content-bg);
+    --color-ui-content-text: var(--ui-content-text);
+
+    --color-ui-table-head: var(--ui-table-head);
+    --color-ui-table-border: var(--ui-table-border);
 }

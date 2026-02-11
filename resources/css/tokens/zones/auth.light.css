@@ -1,8 +1,14 @@
 /* resources/css/tokens/zones/auth.light.css */
 [data-zone="auth"][data-theme="light"] {
+    /* Design tokens (constitucionais) */
     --ui-auth-bg: #0b1220;
-    /* seu login pode ser dark por padrão */
     --ui-auth-text: #e2e8f0;
     --ui-auth-title: #ffffff;
     --ui-auth-subtitle: #94a3b8;
+
+    /* Tailwind v4 bridge */
+    --color-ui-auth-bg: var(--ui-auth-bg);
+    --color-ui-auth-text: var(--ui-auth-text);
+    --color-ui-auth-title: var(--ui-auth-title);
+    --color-ui-auth-subtitle: var(--ui-auth-subtitle);
 }

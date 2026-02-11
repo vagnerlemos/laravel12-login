@@ -47,9 +47,23 @@
     /* Navigation */
     --color-ui-nav-bg: var(--ui-nav-bg);
     --color-ui-nav-border: var(--ui-nav-border);
+    --color-ui-nav-title: var(--ui-nav-title);
+    --color-ui-nav-text: var(--ui-nav-text);
+    --color-ui-nav-hover: var(--ui-nav-hover);
+    --color-ui-nav-active: var(--ui-nav-active);
+    --color-ui-nav-active-text: var(--ui-nav-active-text);
 
-    /* (Opcional: se você já usa essas utilities em algum lugar)
-       --color-ui-nav-title: var(--ui-nav-title);
-       --color-ui-nav-text: var(--ui-nav-text);
-    */
+    /* Content */
+    --color-ui-content-bg: var(--ui-content-bg);
+    --color-ui-content-text: var(--ui-content-text);
+
+    /* Auth */
+    --color-ui-auth-bg: var(--ui-auth-bg);
+    --color-ui-auth-text: var(--ui-auth-text);
+    --color-ui-auth-title: var(--ui-auth-title);
+    --color-ui-auth-subtitle: var(--ui-auth-subtitle);
+
+    /* Tables */
+    --color-ui-table-head: var(--ui-table-head);
+    --color-ui-table-border: var(--ui-table-border);
 }

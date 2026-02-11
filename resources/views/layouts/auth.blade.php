@@ -1,4 +1,12 @@
 {{-- resources/views/layouts/auth.blade.php --}}
+@php
+    // Perfil visual vindo do provider (quando autenticado) ou default
+    $visualProfile = $visualProfile ?? 'light';
+
+    // Resolve por zona (canônico)
+    $authTheme = $uiZones['auth'] ?? 'light';
+@endphp
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,7 +19,12 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body x-data data-zone="auth" data-theme="light" class="min-h-screen bg-ui-auth-bg text-ui-auth-text">
+<body
+    x-data
+    data-zone="auth"
+    data-theme="{{ $authTheme }}"
+    class="min-h-screen bg-ui-auth-bg text-ui-auth-text"
+>
     {{-- Loader global --}}
     @include('partials.loader')
 

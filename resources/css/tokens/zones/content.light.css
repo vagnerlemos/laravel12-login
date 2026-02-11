@@ -1,5 +1,18 @@
 /* resources/css/tokens/zones/content.light.css */
 [data-zone="content"][data-theme="light"] {
+    /* Design tokens (constitucionais) */
     --ui-content-bg: transparent;
     --ui-content-text: #0f172a;
+
+    /* Table tokens (usados pelo UI Kit) */
+    --ui-table-head: #f8fafc;
+    --ui-table-border: #e2e8f0;
+    --ui-table-hover-bg: #f1f5f9;
+
+    /* Tailwind v4 bridge */
+    --color-ui-content-bg: var(--ui-content-bg);
+    --color-ui-content-text: var(--ui-content-text);
+
+    --color-ui-table-head: var(--ui-table-head);
+    --color-ui-table-border: var(--ui-table-border);
 }

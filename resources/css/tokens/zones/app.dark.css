@@ -1,5 +1,12 @@
 /* resources/css/tokens/zones/app.dark.css */
 [data-zone="app"][data-theme="dark"] {
+    /* Design tokens (constitucionais) */
     --ui-app-bg: #0b1220;
     --ui-app-text: #e2e8f0;
+
+    /* Tailwind v4 bridge (utilities via CSS variables)
+       Ex.: bg-ui-app-bg / text-ui-app-text
+    */
+    --color-ui-app-bg: var(--ui-app-bg);
+    --color-ui-app-text: var(--ui-app-text);
 }
