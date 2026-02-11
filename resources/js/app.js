@@ -4,6 +4,7 @@ import focus from '@alpinejs/focus'
 
 import themeSwitch from './components/theme-switch'
 import toastComponent from './components/toast'
+import { uiUpload } from './components/upload'
 
 /* =========================================================
    UI MODAL — DEVE EXISTIR ANTES DO Alpine.start()
@@ -13,11 +14,11 @@ globalThis.uiModal = function (id) {
         open: false,
 
         init() {
-            window.addEventListener('ui-modal-open', (e) => {
+            globalThis.addEventListener('ui-modal-open', (e) => {
                 if (e.detail === id) this.open = true
             })
 
-            window.addEventListener('ui-modal-close', (e) => {
+            globalThis.addEventListener('ui-modal-close', (e) => {
                 if (!e.detail || e.detail === id) this.open = false
             })
         },
@@ -36,37 +37,37 @@ globalThis.ui = globalThis.ui || {}
 
 globalThis.ui.toast = {
     success(message) {
-        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'success' } }))
+        globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'success' } }))
     },
     error(message) {
-        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'error' } }))
+        globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'error' } }))
     },
     warning(message) {
-        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'warning' } }))
+        globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'warning' } }))
     },
     info(message) {
-        window.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'info' } }))
+        globalThis.dispatchEvent(new CustomEvent('ui-toast', { detail: { message, type: 'info' } }))
     },
 }
 
 globalThis.ui.modal = {
     open(id) {
-        window.dispatchEvent(new CustomEvent('ui-modal-open', { detail: id }))
+        globalThis.dispatchEvent(new CustomEvent('ui-modal-open', { detail: id }))
     },
     close(id) {
-        window.dispatchEvent(new CustomEvent('ui-modal-close', { detail: id }))
+        globalThis.dispatchEvent(new CustomEvent('ui-modal-close', { detail: id }))
     },
     closeAll() {
-        window.dispatchEvent(new CustomEvent('ui-modal-close'))
+        globalThis.dispatchEvent(new CustomEvent('ui-modal-close'))
     },
 }
 
 globalThis.ui.loader = {
     show() {
-        window.dispatchEvent(new CustomEvent('ui-loader-show'))
+        globalThis.dispatchEvent(new CustomEvent('ui-loader-show'))
     },
     hide() {
-        window.dispatchEvent(new CustomEvent('ui-loader-hide'))
+        globalThis.dispatchEvent(new CustomEvent('ui-loader-hide'))
     },
 }
 
@@ -81,5 +82,10 @@ Alpine.plugin(focus)
 Alpine.data('uiToast', toastComponent)
 Alpine.data('themeSwitch', themeSwitch)
 
-window.Alpine = Alpine
+/**
+ * Upload System (Fase 3)
+ */
+globalThis.uiUpload = uiUpload
+
+globalThis.Alpine = Alpine
 Alpine.start()

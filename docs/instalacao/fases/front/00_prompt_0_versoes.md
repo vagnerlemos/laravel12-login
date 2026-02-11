@@ -26,7 +26,37 @@ CSS / UI:
 
 JavaScript / Interatividade:
 - Alpine.js: 3.15.8
+--------------------------------------------------
+FERRAMENTA AUXILIAR DISPONÍVEL
+--------------------------------------------------
 
+OpenAI Codex Agent:
+- Instalado no sistema
+- Acesso autenticado (login/senha)
+- Configurado em modo seguro (informativo)
+- NÃO altera código automaticamente
+- Atua apenas quando explicitamente solicitado
+
+Uso permitido do Codex:
+- Consultar documentação oficial atualizada
+- Validar sintaxe específica de versões (Laravel 12, Tailwind 4, Vite 7, Alpine 3)
+- Confirmar APIs recentes
+- Verificar breaking changes
+- Auxiliar em comandos CLI
+
+Uso NÃO permitido do Codex:
+- Alterar arquivos automaticamente
+- Refatorar código sem validação
+- Modificar arquitetura sem aprovação explícita
+
+Regra de uso:
+Se houver dúvida de compatibilidade de versão,
+pode-se consultar o Codex como agente informativo.
+Qualquer sugestão deve ser validada antes de aplicação.
+
+--------------------------------------------------
+DIRETRIZ OBRIGATÓRIA PARA A IA
+--------------------------------------------------
 Diretriz obrigatória para a IA:
 - SEMPRE considerar estas versões como fonte de verdade.
 - NÃO utilizar sintaxe, APIs ou padrões de versões antigas
@@ -42,3 +72,16 @@ Diretriz obrigatória para a IA:
 Regra de ouro:
 Código antigo que “funcionava antes” NÃO é referência.
 A referência é este stack.
+
+
+7️⃣ PRÓXIMO CHAT — INSTRUÇÃO DE CONTINUIDADE
+
+Abrir o novo chat com:
+
+Retomando do CHECKPOINT 04 — Front-End ERP Laravel 12.
+Branch: feature/fase3-upload-runtime.
+Foco: Institucionalizar Estados Globais (loading/disabled no Button System).
+Código-fonte atualizado já enviado.
+
+
+E seguimos direto, sem retrabalho.

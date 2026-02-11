@@ -1,0 +1,64 @@
+/* =========================================================
+   TOKENS — Upload System (Fase 3)
+========================================================= */
+
+:root {
+    --ui-upload-bg: #ffffff;
+    --ui-upload-border: #e2e8f0;
+    --ui-upload-hover: #f1f5f9;
+
+    --ui-upload-text: #334155;
+    --ui-upload-muted: #64748b;
+
+    --ui-upload-progress-bg: #e2e8f0;
+    --ui-upload-progress-fill: #0f172a;
+
+    --ui-upload-error: #dc2626;
+    --ui-upload-success: #16a34a;
+}
+
+/* Estrutura base */
+.ui-upload {
+    border: 1px dashed var(--ui-upload-border);
+    background: var(--ui-upload-bg);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.ui-upload:hover {
+    background: var(--ui-upload-hover);
+}
+
+.ui-upload-text {
+    color: var(--ui-upload-text);
+}
+
+.ui-upload-muted {
+    color: var(--ui-upload-muted);
+}
+
+/* Progress */
+.ui-upload-progress {
+    width: 100%;
+    height: 6px;
+    background: var(--ui-upload-progress-bg);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.ui-upload-progress-bar {
+    height: 100%;
+    background: var(--ui-upload-progress-fill);
+    width: 0%;
+    transition: width 0.2s ease;
+}
+
+/* Estados */
+.ui-upload-error {
+    border-color: var(--ui-upload-error);
+}
+
+.ui-upload-success {
+    border-color: var(--ui-upload-success);
+}
